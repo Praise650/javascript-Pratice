@@ -1,0 +1,19 @@
+body{
+    margin: 0 auto;
+    background: linear-gradient(black, darkgray);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100dvw;
+    color: white;
+    /* align-items: center; */
+    justify-content: center;
+    display: flex;
+}
+
+.get-started{
+    height: 2rem;
+    width: 10rem;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
