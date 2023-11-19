@@ -1,5 +1,5 @@
-body{
-    margin: 0 auto;
+body {
+    /* margin: 0 auto; */
     background: linear-gradient(black, darkgray);
     background-repeat: no-repeat;
     height: 100vh;
@@ -8,12 +8,28 @@ body{
     /* align-items: center; */
     justify-content: center;
     display: flex;
+    margin-top: 50px;
 }
 
-.get-started{
+.container {
+    background-color: black;
+    width: 80%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    border-radius: 16px;
+}
+
+.get-started {
     height: 2rem;
-    width: 10rem;
+    width: 200px;
     cursor: pointer;
     color: white;
-    background-color: black;
+    /* justify-self: center;
+    display: flex; */
+    background: linear-gradient(black, darkgray);
+    /* background-color: black; */
 }

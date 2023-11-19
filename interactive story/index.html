@@ -9,28 +9,32 @@
 </head>
 
 <body>
-    <script src="./index.js"></script>
-    <div>
-        <h1 id="demo"></h1>
-
+    <div class="container">
         <h1 class="header">Interactive story</h1>
-        <h3 class="header">Make it come to life</h3>
+        <h3 class="sub-title">Make it come to life</h3>
         <p>Get immersed in the reality where there is a possibility of every actions and decisions you make</p>
-        <section>
-            <button class="get-started" onclick="start">Get Started</button><br/>
-            <div>
+        <section class="story-section">
+            <button class="get-started" onclick=start()>Yes</button><br />
+            <p id="story">There goes a man into the forest 
+                <div class="buttons">
+                    <button class="decisionPoint1"
+                onclick=start()>NO</button>
+                <button class="decisionPoint1"
+                onclick=start()>YES</button>
+            </div>
+        </p>
+            <!-- <div>
                 <label class="age-selector">Age</label>
                 <select type="">
                     <option>
                         18-28
                     </option>
                 </select>
-            </div>
-        </section>
-        <section>
-            <p>There goes a man into the forest </p>
+            </div> -->
         </section>
     </div>
+
+    <script src="./index.js"></script>
 </body>
 
 </html>
