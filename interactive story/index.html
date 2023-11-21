@@ -10,31 +10,43 @@
 
 <body>
     <div class="container">
-        <h1 class="header">Interactive story</h1>
-        <h3 class="sub-title">Make it come to life</h3>
-        <p>Get immersed in the reality where there is a possibility of every actions and decisions you make</p>
-        <section class="story-section">
-            <button class="get-started" onclick=start()>Yes</button><br />
-            <p id="story">There goes a man into the forest 
-                <div class="buttons">
-                    <button class="decisionPoint1"
-                onclick=start()>NO</button>
-                <button class="decisionPoint1"
-                onclick=start()>YES</button>
+        <div class="dyna">
+            <h3 id="title"></h3>
+            <p id="sub-title"></p>
+            <div class="buttons"></div>
+        </div>
+        <!-- <div class="header-container">
+            <span class="header">Interactive story</span>
+            <span class="sub-header">Make it come to life</span>
+        </div>
+        
+        
+        <div class="get-immersed">
+            <span>
+                Get immersed in the reality where there is a possibility <br />of every actions and decisions you make
+            </span>
+            <br /><br />
+            <div class="selector-container">
+                <button class="begin">Begin your story</button>
+                <div class="dropdown">
+                    <label class="dropdown-label">What do you want to be</label>
+                    <select class="dropdown-option">
+                        <option value="archaeologist">Archaeologist</option>
+                        <option value="hobbyist">Hobbyist</option>
+                    </select>
+                </div>
             </div>
-        </p>
-            <!-- <div>
-                <label class="age-selector">Age</label>
-                <select type="">
-                    <option>
-                        18-28
-                    </option>
-                </select>
-            </div> -->
-        </section>
+        </div>
+        <br />
+        <section class="story-section">
+            <p id="story">
+            <div class="buttons"></div>
+            </p>
+        </section> -->
     </div>
 
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./data/scene.js"></script>
 </body>
 
 </html>
