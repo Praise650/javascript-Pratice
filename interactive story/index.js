@@ -10,46 +10,81 @@ const titleElement = document.getElementById('title');
 const subTitleElement = document.getElementById('sub-title');
 let buttons = document.querySelector('.buttons');
 
-titleElement.innerText = '';
-subTitleElement.innerText = '';
 
-titleElement.innerText += "Title:" + scenesList[selectedIndex].sceneTitle;
-const newParagraph = document.createElement('span');
+function initialRender() {
+  titleElement.innerText = '';
+  subTitleElement.innerText = '';
 
-const newLine = intro +' '+ scenesList[selectedIndex].step;
-textTypingEffect(subTitleElement, newLine);
-dynamicD.appendChild(newParagraph);
+  titleElement.innerText += "Title:" + scenesList[selectedIndex].sceneTitle;
+  const newParagraph = document.createElement('span');
 
-actions = scenesList[selectedIndex].action.split('or');
-for (let i = 0; i < actions.length; i++) {
-  buttonList += `<button class='actionButton'>${actions[i]}</button>`;
+  const newLine = intro + ' ' + scenesList[selectedIndex].step;
+  textTypingEffect(subTitleElement, newLine);
+  dynamicD.appendChild(newParagraph);
+
+  actions = scenesList[selectedIndex].action.split('or');
+  for (let i = 0; i < actions.length; i++) {
+    buttonList += `<button class='actionButton'>${actions[i]}</button>`;
+  }
+
+  buttons.innerHTML = buttonList;
+
+  const actionButtons = document.querySelectorAll('.actionButton');
+
+  actionButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      if (index === 0) {
+        console.log("First Index", index);
+        const newLine = scenesList[selectedIndex].actionOne;
+        textTypingEffect(subTitleElement, newLine);
+      } else {
+        console.log("Second Index", index);
+        const newLine = scenesList[selectedIndex].actionTwo;
+        textTypingEffect(subTitleElement, newLine);
+      }
+      travaseList();
+    });
+  });
 }
 
-buttons.innerHTML = buttonList;
+function reRender(index) {
+  titleElement.innerText = '';
+  subTitleElement.innerText = '';
 
-const actionButtons = document.querySelectorAll('.actionButton');
+  titleElement.innerText += "Title:" + scenesList[index].sceneTitle;
+  const newParagraph = document.createElement('span');
 
-actionButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    if (index === 0) {
-      console.log("First Index", index);
-      const newLine = scenesList[selectedIndex].actionOne;
-      textTypingEffect(subTitleElement, newLine);
-    } else {
-      console.log("Second Index", index);
-      const newLine = scenesList[selectedIndex].actionTwo;
-      textTypingEffect(subTitleElement, newLine);
-    }
-    // travaseList();
-    // if(actionButtons.keys)
+  const newLine = intro + ' ' + scenesList[index].step;
+  textTypingEffect(subTitleElement, newLine);
+  dynamicD.appendChild(newParagraph);
+
+  actions = scenesList[index].action.split('or');
+  for (let i = 0; i < actions.length; i++) {
+    buttonList += `<button class='actionButton'>${actions[i]}</button>`;
+  }
+
+  buttons.innerHTML = buttonList;
+  const actionButtons = document.querySelectorAll('.actionButton');
+
+  actionButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      if (index === 0) {
+        console.log("First Index", index);
+        const newLine = scenesList[selectedIndex].actionOne;
+        textTypingEffect(subTitleElement, newLine);
+      } else {
+        console.log("Second Index", index);
+        const newLine = scenesList[selectedIndex].actionTwo;
+        textTypingEffect(subTitleElement, newLine);
+      }
+      travaseList();
+    });
   });
-});
-
+}
 
 function travaseList() {
   selectedIndex += 1;
-  console.log(selectedIndex);
-  buttonList = '';
+  reRender(selectedIndex);
 }
 
 // the cooking that currently works 

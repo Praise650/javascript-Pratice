@@ -3,11 +3,11 @@ body {
     background: linear-gradient(black, darkgray);
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100dvw;
+    width: 100vw;
     color: white;
     align-items: center;
     justify-content: center;
-    /* display: flex; */
+    display: flex;
     /* margin-top: 50px; */
 }
 
