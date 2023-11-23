@@ -1,4 +1,4 @@
-import { scenesList, intro } from './data/scene.js';
+import { scenesList, intro } from '../data/scenes.js';
 
 let currentIndex = 0;
 let scene = {};
@@ -18,7 +18,7 @@ function getInitScene() {
 
 getInitScene();
 
-function updateScene() {
+const updateScene = () => {
     currentIndex++;
     if (currentIndex < scenesList.length) {
         getInitScene();
@@ -28,7 +28,7 @@ function updateScene() {
     console.log(currentIndex);
 };
 
-let getNextScene = updateScene();
+// let getNextScene = updateScene();
 
 
-export { scene, currentIndex, getNextScene}
+export { intro, scene, updateScene }

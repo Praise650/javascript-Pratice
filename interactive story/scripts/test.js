@@ -1,26 +1,25 @@
-import { scenesList, intro } from './data/scene.js';
+import { intro, scene, updateScene } from './object.js';
 
-let selectedIndex = 0;
 let buttonList = '';
 let actions = null;
 
-// const dynamicD = document.querySelector('.dyna');
 const titleElement = document.getElementById('title');
 const subTitleElement = document.getElementById('sub-title');
 let buttons = document.querySelector('.buttons');
 
-function setTitleAndSubtitle() {
+function setTitleAndSubtitle(introText) {
+    let intro = introText === undefined ? '':introText;
     titleElement.innerText = '';
     subTitleElement.innerText = '';
 
-    titleElement.innerText += "Title:" + scenesList[selectedIndex].sceneTitle;
-    const newLine = intro + ' ' + scenesList[selectedIndex].step;
+    titleElement.innerText += "Title:" + scene.sceneTitle;
+    const newLine = intro + ' ' + scene.step;
     textTypingEffect(subTitleElement, newLine);
     createButtons();
 }
 
 function createButtons() {
-    actions = scenesList[selectedIndex].action.split('or');
+    actions = scene.action.split('or');
     for (let i = 0; i < actions.length; i++) {
         buttonList += `<button class='actionButton'>${actions[i]}</button>`;
     }
@@ -29,13 +28,13 @@ function createButtons() {
 }
 
 function handleButtonClick(index) {
-    let nextLine = scenesList[selectedIndex + 1].step;
+    // let nextLine = scenesList[selectedIndex + 1].step;
     const selectedAction = (index === 0) ?
-        scenesList[selectedIndex].actionOne + "  " + nextLine : scenesList[selectedIndex].actionTwo;
+        scene.actionOne + "  " + scene.nextStep : scene.actionTwo;
 
     textTypingEffect(subTitleElement, selectedAction);
-    selectedIndex + 1;
-    reRender(selectedIndex);
+    updateScene()
+    setTitleAndSubtitle();
 }
 
 function addButtonListeners() {
@@ -53,7 +52,8 @@ function addButtonListeners() {
     });
 }
 
-setTitleAndSubtitle();
+setTitleAndSubtitle(intro);
+
 
 // text animation effect 
 function textTypingEffect(element, text, index = 0) {
@@ -62,25 +62,4 @@ function textTypingEffect(element, text, index = 0) {
         return;
     }
     setTimeout(() => textTypingEffect(element, text, index + 1), 50);
-}
-
-// displays story
-async function showStory(text) {
-    const story = document.getElementById('story');
-    const newParagraph = document.createElement('span');
-    textTypingEffect(newParagraph, text);
-    story.appendChild(newParagraph);
-}
-
-
-function reRender(selectedIndex) {
-    actions = null;
-    let intro = scenesList[selectedIndex + 1].step
-    // titleElement.innerText = '';
-    // subTitleElement.innerText = '';
-
-    titleElement.innerText += "Title:" + scenesList[selectedIndex].sceneTitle;
-    const newLine = scenesList[selectedIndex].step + ' ' + intro;
-    textTypingEffect(subTitleElement, newLine);
-    createButtons();
 }

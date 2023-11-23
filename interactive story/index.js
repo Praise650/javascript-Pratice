@@ -1,4 +1,4 @@
-import { scenesList, intro } from './data/scene.js';
+import { scenesList, intro } from './data/scenes.js';
 
 
 let selectedIndex = 0;
