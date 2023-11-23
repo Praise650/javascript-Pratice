@@ -10,22 +10,22 @@ let sceneIndex= {
 function getInitScene() {
     scene = scenesList[currentIndex];
     // Check if currentIndex is not at the last scene to avoid accessing out-of-bounds
-    if (currentIndex < scenesList.length - 1) {
-        scene.nextStep = scenesList[currentIndex].step;
-    } else {
-        scene.nextStep = "End of scenes";
-    }
+    // if (currentIndex < scenesList.length - 1) {
+    //     scene.nextStep = scenesList[currentIndex].step;
+    // } else {
+    //     scene.nextStep = "End of scenes";
+    // }
     console.log(scene);
 }
 
 getInitScene();
 
 const updateScene = () => {
-    currentIndex++;
     if (currentIndex < scenesList.length) {
+        currentIndex++;
         getInitScene();
     } else {
-        console.log("End of scenes");
+        console.log("End of Scene");
     }
     console.log(currentIndex);
 };

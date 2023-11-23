@@ -28,13 +28,17 @@ function createButtons() {
 }
 
 function handleButtonClick(index) {
+    buttonList = ``;
     const selectedAction = (index === 0) ?
         scene.actionOne : scene.actionTwo;
 
     textTypingEffect(subTitleElement, selectedAction)
         .then(() => {
-            updateScene()
+            if(sceneIndex.selectedIndex < sceneIndex.lastIndex){
+                updateScene()
             setTitleAndSubtitle();
+            } else{
+            }
         })
         .catch(err => console.log(err));
 }
@@ -43,9 +47,6 @@ function addButtonListeners() {
     const actionButtons = document.querySelectorAll('.actionButton');
     actionButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            if(sceneIndex.selectedIndex === sceneIndex.lastIndex){
-                buttonList ='';
-            } else{
                 if (index === 0) {
                     console.log("First Index", index);
                     handleButtonClick(index);
@@ -53,7 +54,6 @@ function addButtonListeners() {
                     console.log("Second Index", index);
                     handleButtonClick(index);
                 }
-            }
         });
     });
 }
