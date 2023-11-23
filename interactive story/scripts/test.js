@@ -1,4 +1,4 @@
-import { intro, scene, updateScene } from './object.js';
+import { intro, scene, sceneIndex, updateScene } from './object.js';
 
 let buttonList = '';
 let actions = null;
@@ -7,15 +7,15 @@ const titleElement = document.getElementById('title');
 const subTitleElement = document.getElementById('sub-title');
 let buttons = document.querySelector('.buttons');
 
-function setTitleAndSubtitle(introText) {
-    let intro = introText === undefined ? '':introText;
+function setTitleAndSubtitle() {
     titleElement.innerText = '';
     subTitleElement.innerText = '';
+    buttonList = '';
 
     titleElement.innerText += "Title:" + scene.sceneTitle;
-    const newLine = intro + ' ' + scene.step;
-    textTypingEffect(subTitleElement, newLine);
-    createButtons();
+    textTypingEffect(subTitleElement, scene.step).then(() => {
+        createButtons();
+    }).catch(err => console.log(err));
 }
 
 function createButtons() {
@@ -28,38 +28,57 @@ function createButtons() {
 }
 
 function handleButtonClick(index) {
-    // let nextLine = scenesList[selectedIndex + 1].step;
     const selectedAction = (index === 0) ?
-        scene.actionOne + "  " + scene.nextStep : scene.actionTwo;
+        scene.actionOne : scene.actionTwo;
 
-    textTypingEffect(subTitleElement, selectedAction);
-    updateScene()
-    setTitleAndSubtitle();
+    textTypingEffect(subTitleElement, selectedAction)
+        .then(() => {
+            updateScene()
+            setTitleAndSubtitle();
+        })
+        .catch(err => console.log(err));
 }
 
 function addButtonListeners() {
     const actionButtons = document.querySelectorAll('.actionButton');
     actionButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            if (index === 0) {
-                console.log("First Index", index);
-                handleButtonClick(index);
-            } else {
-                console.log("Second Index", index);
-                handleButtonClick(index);
+            if(sceneIndex.selectedIndex === sceneIndex.lastIndex){
+                buttonList ='';
+            } else{
+                if (index === 0) {
+                    console.log("First Index", index);
+                    handleButtonClick(index);
+                } else {
+                    console.log("Second Index", index);
+                    handleButtonClick(index);
+                }
             }
         });
     });
 }
 
-setTitleAndSubtitle(intro);
+setIntro();
 
+function setIntro() {
+    titleElement.innerText += "Title: Introduction";
+    textTypingEffect(subTitleElement, intro)
+        .then(setTitleAndSubtitle)
+        .catch(err => console.log(err));
+}
 
 // text animation effect 
 function textTypingEffect(element, text, index = 0) {
-    element.textContent += text[index];
-    if (index === text.length - 1) {
-        return;
-    }
-    setTimeout(() => textTypingEffect(element, text, index + 1), 50);
+    return new Promise((resolve, reject) => {
+        if (index < text.length) {
+            element.textContent += text[index];
+            setTimeout(() => {
+                textTypingEffect(element, text, index + 1)
+                    .then(() => resolve())
+                    .catch(reject);
+            }, 50);
+        } else {
+            resolve();
+        }
+    }, 2000);
 }
