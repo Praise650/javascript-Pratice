@@ -19,6 +19,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* background-color: white; */
+    /* width: 100%; */
 }
 
 .img-box {
@@ -43,20 +45,65 @@ body {
     gap: 1.4375rem;
 }
 
+
+.monthly {
+    color: white;
+    font-size: 3.74775rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.budget {
+    color: green;
+    font-size: 3.74775rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.start-btn {
+    display: inline-flex;
+    padding: 0.75rem 4.3125rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.25rem;
+    background: var(--complementaries-compl-opt-1, #FFE600);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.04);
+}
+
+/* dashboard body */
 .expense-body {
     display: flex;
+    justify-content: space-around;
+    gap: 2.625rem;
+    outline: 1px solid black;
+    margin-bottom: 20px;
     flex-direction: row;
-    justify-content: space-between;
-    /* background-color: white; */
-    outline: auto;
-    height: 60%;
+    padding: 10px;
 }
 
 .lt-row {
     color: #fff;
-    width: max-content;
-    outline: 1px blue solid;
-    width: 600px;
+    /* width: 35rem; */
+}
+
+.md-row {
+    width: 22rem;
+    background-color: white;
+    padding: 1rem 1.9rem;
+    display: block;
+}
+
+.rt-row {
+    width: 22rem;
+    background-color: white;
+    padding: 1rem 1.9rem;
+    display: block;
 }
 
 .filter-container {
@@ -67,9 +114,10 @@ body {
 .desc-header {
     display: flex;
     justify-content: space-between;
-    /* background-color: red; */
     align-items: center;
     height: 30px;
+    padding-bottom: 81px;
+    margin-bottom: 130px;
 }
 
 select {
@@ -94,49 +142,216 @@ select {
     text-transform: capitalize;
 }
 
-.expense-yet{
+.expense-yet {
     color: var(--complementaries-compl-opt-2, #51D289);
 }
 
-.cart{
+
+.no-wories {
+    color: var(--extras-box-color-light, #FFFDE7);
+    text-align: center;
+    font-size: 1.32563rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.no-wories .add-text {
+    color: var(--complementaries-compl-opt-2, #51D289);
+}
+
+.cart {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 280px;
-    background-color: blue;
+    /* background-color: red; */
+    margin-top: 49px;
 
 }
 
-
-
-
-
-.start-btn {
-    background-color: #FFE600;
+.income-card {
+    background: var(--extras-box-color-light, #FFFDE7);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8125rem 4.875rem 0.6875rem 4.8125rem;
+    flex-direction: column;
+    gap: 0.25rem;
     border-radius: 0.25rem;
-    outline: none;
-    padding: 0.75rem 2.5rem;
+    color: #1e1e1e;
+    font-size: 1rem;
+}
+
+.income-card .income-text {
+    color: #000;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.07313rem;
+    text-transform: uppercase;
+}
+
+.income-value {
+    color: var(--main-dsrk-base, #1E1E1E);
+    font-size: 1.87444rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.expense-divider {
+    border-block: 0.5px dotted black;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+
+.reset-btn {
+    display: inline-flex;
+    padding: 0.75rem 4.3125rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.25rem;
+    background: var(--complementaries-compl-opt-1, #FFE600);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.04);
+
+    color: #000;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 1.32563rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.select-btn {
+    display: inline-flex;
+    padding: 0.125rem 0.75rem 0.1875rem 0.9375rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.375rem;
+    background: var(--complementaries-compl-opt-2, #51D289);
+}
+
+.opt-list-item {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.optional-card {
+    background: var(--extras-box-color-light, #FFFDE7);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem 0.6875rem 1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    border-radius: 0.25rem;
+    color: #1e1e1e;
+    font-size: 1rem;
+}
+
+.goals-container {
+    height: 3rem;
+    border-left: 10px solid green;
 }
 
 a {
     text-decoration: none;
 }
 
-.monthly {
+.balance-spent {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+}
+
+.card-design {
+    background: var(--main-dsrk-base, #1E1E1E);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    width: 10.875rem;
+    height: 4.3125rem;
+    display: inline-block;
+    border-radius: 0.25rem;
+}
+
+.card-design .income-text {
     color: white;
-    font-size: 3.74775rem;
+    font-size: 0.8125rem;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.07313rem;
+    text-transform: uppercase;
+}
+
+.card-design .income-value {
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 1.32563rem;
+    font-style: normal;
+    font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
 }
 
-.budget {
-    color: green;
-    font-size: 3.74775rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    text-transform: capitalize;
+.balance .income-value {
+    color: var(--complementaries-compl-opt-2, #51D289);
 }
+
+.spent .income-value {
+    color: var(--complementaries-compl-opt-1, #FFE600);
+}
+
+.pie {
+    --w: 150px;
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    place-content: center;
+    margin: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-block: 2.4rem;
+}
+
+.pie:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+    mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+.pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+
+/* dashoboard body */

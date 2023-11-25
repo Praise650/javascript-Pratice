@@ -28,7 +28,7 @@
             <span style="color: #fff;">Welcome Aexander</span>
         </div>
     </header>
-    <hr />
+    <hr class="divider" style="margin-bottom: 5rem;" />
     <section class="expense-body">
         <div class="lt-row">
             <div class="desc-header">
@@ -43,20 +43,98 @@
                     </select>
                 </div>
             </div>
-            <h1 class="nothing-yet-text">Looks like you haven't added any <span class="expense-yet">expenses yet.</span></h1>
+            <h1 class="nothing-yet-text">Looks like you haven't added any <span class="expense-yet">expenses yet.</span>
+            </h1>
             <div class='cart'>
-                <span>No worries, just hit the 'Add' button 
+                <span class="no-wories">No worries, just hit the <span class="add-text">'Add'</span> button
                     to get started</span>
+                <div style="margin-top: 2rem;">
                     <img src="../pubic/assets/icons/cart.svg" />
+                </div>
             </div>
         </div>
         <div style="color: #fff;" class="md-row">
-            The
+            <h2 style="color: black;font-weight: 500;text-align: center;">Calculation</h2>
+            <div class="expense-divider">
+                <div class="income-card income-card-item">
+                    <span class="income-text">Income</span>
+                    <span class="income-value">$2,700.00</span>
+                </div>
+                <div class="pie" style="--p:60;--b:10px;--c:purple;">60%</div>
+                <div class="balance-spent">
+                    <div class="card-design balance">
+                        <span class="income-text">Available</span><br/>
+                        <span class="income-value">$2,000.00</span>
+                    </div>
+                    <div class="card-design spent">
+                        <span class="income-text">Spent</span><br/>
+                        <span class="income-value">$800.00</span>
+                    </div>
+                </div>
+            </div>
+            <button class="reset-btn">Reset Expenses</button>
         </div>
         <div style="color: #fff;" class="rt-row">
-            Other Side
+            <h2 style="color: black;font-weight: 500;text-align: center;">Optionals</h2>
+            <div class="expense-divider">
+                <div class="optional-card optional-card-item income-card">
+                    <span class="income-text">Choose Any Fix Expenses</span>
+                    <div class="opt-list-item-container" style="padding-block: 1.7rem;">
+                        <div class="opt-list-item">
+                            <diV style="display: inline-flex; gap: 0.4rem;">
+                                <img src="../pubic//assets/icons/netflix.svg" />
+                                <h3>Netflix</h3>
+                            </diV>
+                            <button class="select-btn">select</button>
+                        </div>
+                        <div class="opt-list-item">
+                            <diV style="display: inline-flex; gap: 0.4rem;">
+                                <img src="../pubic//assets/icons/spotify.svg" />
+                                <h3>Spotify</h3>
+                            </diV>
+                            <button class="select-btn">select</button>
+                        </div>
+                        <div class="opt-list-item">
+                            <diV style="display: inline-flex; gap: 0.4rem;">
+                                <img src="../pubic//assets/icons/amazon.svg" />
+                                <h3>Amazon</h3>
+                            </diV>
+                            <button class="select-btn">select</button>
+                        </div>
+                        <div class="opt-list-item">
+                            <diV style="display: inline-flex; gap: 0.4rem;">
+                                <img src="../pubic//assets/icons/google.svg" />
+                                <h3>Google</h3>
+                            </diV>
+                            <button class="select-btn">select</button>
+                        </div>
+                        <div class="opt-list-item">
+                            <diV style="display: inline-flex; gap: 0.4rem;">
+                                <img src="../pubic//assets/icons/facebook.svg" />
+                                <h3>Facebook</h3>
+                            </diV>
+                            <button class="select-btn">select</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 style="color: black; display: flex; justify-content: center;">Goals</h1>
+            <div class="goals-container">
+                <h3 class="save-text" style="color: #000;
+                font-size: 0.8125rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                width: 17.90rem;
+                padding-left: 0.69rem; padding-top: 0.5rem;">
+                    "Save 10% of this amount entered this month <br />
+                    from my salary"
+                </h3>
+            </div>
         </div>
     </section>
+
+    <!-- <div style="color: white; display: flex; justify-content: center;">Bello there</div> -->
 </body>
 
 </html>
