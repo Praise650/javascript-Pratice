@@ -167,7 +167,6 @@ select {
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* background-color: red; */
     margin-top: 49px;
 
 }
@@ -321,18 +320,85 @@ a {
     color: var(--complementaries-compl-opt-1, #FFE600);
 }
 
+.donutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* float: right; */
+    background-color: red;
+    margin-block: 2.9rem;
+    text-align: center;
+}
+
+.donutContainer h2 {
+    text-align: center;
+    display: flex;
+    /* position: absolute; */
+    line-height: 125px;
+    width: 100%;
+    color: black;
+
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.donut {
+    stroke-dasharray: 440;
+    -webkit-animation: donut 1s ease-out forwards;
+    animation: donut 1s ease-out forwards;
+}
+
+@-webkit-keyframes donut {
+    from {
+        stroke-dashoffset: 440;
+    }
+}
+
+@keyframes donut {
+    from {
+        stroke-dashoffset: 440;
+    }
+}
+
+
+.pie-container {
+    /* background-color: red; */
+    margin-block: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    color: #000;
+}
+
+.pie h2 {
+    color: var(--main-dsrk-base, #1E1E1E);
+    font-size: 2.65044rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.pie h2 span {
+    color: var(--main-dsrk-base, #1E1E1E);
+    text-align: center;
+    font-size: 1.32563rem;
+    display: block;
+}
+
 .pie {
-    --w: 150px;
+    --w: 160px;
     width: var(--w);
     aspect-ratio: 1;
     position: relative;
     display: inline-grid;
     place-content: center;
     margin: 5px;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: sans-serif;
-    margin-block: 2.4rem;
 }
 
 .pie:before {
