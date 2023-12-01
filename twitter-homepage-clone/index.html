@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitter Homepage Clone</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index-responsiveness.css">
 </head>
 
 <body>
@@ -17,9 +17,9 @@
         </div>
         <div class="sz">
             <div class="right-col">
-                <h1>Happening Now</h1>
+                <h1>Happening now</h1>
                 <div class="join-now-container">
-                    <h3>Join today</h3>
+                    <h3>Join today.</h3>
                     <div class="btn-outter-container">
                         <button class="auth-action-btn">
                             <img src="./assets/icons/google-24.svg" />
@@ -27,36 +27,44 @@
                         </button>
                     </div>
                     <div class="btn-outter-container">
-                    <button class="auth-action-btn">
-                        <img src="./assets/icons/apple-24.svg" />
-                        <span>Sign up with Apple</span>
+                        <button class="auth-action-btn">
+                            <img src="./assets/icons/apple-24.svg" />
+                            <span>Sign up with Apple</span>
+                        </button>
+                    </div>
+                    <div class="divider-container">
+                        <div class="divider">
+                            <span class='hr-divider'></span>
+                            <span class="divider-text">or</span>
+                            <span class='hr-divider'></span>
+                        </div>
+                    </div>
+                    <div class="btn-outter-container">
+                        <button class="auth-action-btn create-account-btn">
+                            <span>Create account</span>
+                        </button>
+                    </div>
+                    <div class="terms-agreement-text-container">
+                        <span class="terms-agreement-text">
+                            By signing up, you agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                Policy,</a> including <a href="#">Cookie
+                                Use.</a></span>
+                    </div>
+                </div>
+                <div class="login-container">
+                    <h4>Already have an account?</h4>
+                    <button class="auth-action-btn sign-in">
+                        Sign in
                     </button>
                 </div>
-                <div class="divider">
-                    <div class='hr-divider'><span>or</span></div>
-                </div>
-                <div class="btn-outter-container">
-                <button class="auth-action-btn create-account-btn">
-                    <span>Create account</span>
-                </button>
             </div>
-            <span>By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie
-                Use.</span>
         </div>
-        <div class="login-container">
-            <h4>Already have an account?</h4>
-            <button class="auth-action-btn sign-in">
-                <span>Sign in</span>
-            </button>
-        </div>
-    </div>
-    </div>
     </div>
 
-    <footer>
-        <span>About Download the X app HelpCentre Terms of Service Privacy Policy Cookie Policy</span>
+    <footer class="footer-container">
+        <ul class="footer-list-item"></ul>
     </footer>
-
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
