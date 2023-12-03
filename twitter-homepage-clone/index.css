@@ -22,14 +22,15 @@
 }
 
 .create-account-btn {
-    background-color: blue;
+    background-color: #1D9BF0;
     color: white;
 }
 
 .sign-in {
     background-color: transparent;
     outline: 1px gray solid;
-    color: blue;
+    color: #1D9BF0;
+    font-weight: 500;
 }
 
 /* buttons */
@@ -62,61 +63,6 @@ body {
     /* gap: 20px; */
 }
 
-.sz {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left-col img {
-    height: 350px;
-    background-repeat: no repeat;
-}
-
-.right-col {
-    height: max-content;
-    padding-left: 10px;
-    padding-block: 10px;
-}
-
-.right-col h1 {
-    font-size: 48px;
-}
-
-.join-now-container {
-    display: block;
-    margin-block: 40px;
-}
-
-.join-now-container h3 {
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 25px;
-}
-
-.btn-outter-container {
-    display: block;
-    /* flex: content; */
-    margin-top: 5px;
-}
-
-.terms-agreement-text-container{
-    width: 15rem;
-    padding: 0;
-}
-
-.terms-agreement-text {
-    font-size: 0.611rem;
-    font-weight: 500;
-    content: normal;
-}
-
-.login-container .sign-in{
-    margin-top: 15px;
-}
-
 .divider-container {
     width: 15rem;
 }
@@ -135,4 +81,78 @@ body {
 
 .divider-text {
     margin-inline: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        max-width: 100vw;
+        height: 100vh;
+        /* min-width: 300px; */
+        padding-inline: 30px;
+    }
+    
+    .body-container {
+        height: max-content;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+}
+@media (max-width: 768px) {}
+@media (max-width: 1024px) {
+    .sz {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .left-col img {
+        height: 350px;
+        background-repeat: no repeat;
+    }
+    
+    .right-col {
+        height: max-content;
+        padding-left: 10px;
+        padding-block: 10px;
+    }
+    
+    .right-col h1 {
+        font-size: 48px;
+    }
+    
+    .join-now-container {
+        display: block;
+        margin-block: 40px;
+    }
+    
+    .join-now-container h3 {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .btn-outter-container {
+        display: block;
+        /* flex: content; */
+        margin-top: 5px;
+    }
+    
+    .terms-agreement-text-container{
+        width: 15rem;
+        padding: 0;
+    }
+    
+    .terms-agreement-text {
+        font-size: 0.611rem;
+        font-weight: 500;
+        content: normal;
+    }
+    
+    .login-container .sign-in{
+        margin-top: 15px;
+    }
 }

@@ -20,12 +20,8 @@ const items = [
     "© 2023 X Corp."
 ];
 
-
-
-// console.log(item);
-
 // for (const currentItem in items) {
-// if (Object.hasOwnProperty.call(object, currentItemy)) items
+// if (Object.hasOwnProperty.call(object, currentItem)) items
 //     const element = object[currentItemy];
 // item = currentItem;
 //   console.log(items);
