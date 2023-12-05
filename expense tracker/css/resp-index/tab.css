@@ -1,4 +1,4 @@
-@media (600px >= width <= 1024px){
+@media screen and (min-width: 600px) and (max-width: 1024px) {
     body {
         background-color: #404040;
         justify-content: center;
@@ -21,11 +21,11 @@
     
     .container {
         height: 600px;
-        width: 80%;
+        /* width: 80%; */
         display: flex;
         flex-direction: row;
     }
-    
+
     .lf-col {
         width: 50%;
         background-image: url(./pubic/assets/auth-logo.svg);
@@ -35,15 +35,13 @@
         background-color: wheat;
         padding-left: 55px;
         padding-top: 105px;
-        /* display: flex;
-        flex-direction: column; */
+        display: none;
     }
     
     
     .rt-col {
-        width: 50%;
-        padding-left: 7.5rem;
-        padding-right: 7.5rem;
+        width: 70%;
+        padding-inline: 5.5rem;
         flex-direction: column;
         background-color: black;
     }
@@ -61,20 +59,6 @@
         border-bottom: none;
     }
     
-    a.start-btn{
-        text-decoration: none;
-        height: 52px;
-        color: #000;
-        /* text-align: center; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #FFE600;
-        border-radius: 10px;
-        margin-top: 10.62px;
-        outline: none;
-    }
-    
     .monthly{
         color: white;
         font-size: 59px;
@@ -83,18 +67,5 @@
     .budget{
         color: green;
         font-size: 59px;
-    }
-    
-    .lf-col {
-        width: 50%;
-        background-image: url(./pubic/assets/auth-logo.svg);
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        background-size: contain;
-        background-color: wheat;
-        padding-left: 55px;
-        padding-top: 105px;
-        display: none;
-        /* flex-direction: column; */
     }
 }
