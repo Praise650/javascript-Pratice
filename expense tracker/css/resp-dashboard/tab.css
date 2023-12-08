@@ -74,17 +74,21 @@
     /* dashboard body */
     .expense-body {
         display: flex;
+        background-color: #51D289;
         justify-content: space-around;
         gap: 2.625rem;
         outline: 1px solid black;
         margin-bottom: 20px;
-        flex-direction: row;
+        flex-direction: column;
         padding: 10px;
+        /* flex-wrap: wrap; */
     }
 
     .lt-row {
-        display: none;
+        /* display: none; */
         color: #fff;
+        order: 3;
+        flex-basis: 100%;
         /* width: 35rem; */
     }
 
@@ -93,6 +97,8 @@
         background-color: white;
         padding: 1rem 1.9rem;
         display: block;
+        order: 1;
+        flex-basis: 50%;
     }
 
     .rt-row {
@@ -100,6 +106,8 @@
         background-color: white;
         padding: 1rem 1.9rem;
         display: block;
+        order: 2;
+        flex-basis: 50%;
     }
 
     .filter-container {

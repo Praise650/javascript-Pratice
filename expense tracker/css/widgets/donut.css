@@ -81,6 +81,7 @@ svg {
 
 .pie:before {
     content: "";
+    color: grey;
     position: absolute;
     border-radius: 50%;
     inset: 0;
