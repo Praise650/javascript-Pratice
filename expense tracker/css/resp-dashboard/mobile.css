@@ -63,13 +63,13 @@
     /* dashboard body */
     .expense-body {
         display: flex;
-        background-color: red;
-        outline: 2px white solid;
         justify-content: space-around;
         gap: 2.625rem;
         outline: 1px solid black;
         margin-bottom: 20px;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: 10px;
     }
 

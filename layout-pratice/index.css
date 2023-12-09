@@ -43,33 +43,40 @@
     }
   }
   
-  @media screen and (min-width: 600px) and (max-width: 1024px) {
+  /* @media screen and (min-width: 600px) and (max-width: 1024px) { */
+    @media (max-width: 1024px) {
     body{
       background-color: green;
     }
     
     .container {
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
-  
+
+    .container > *{
+      flex: 1 1 15em;
+    }
+/*   
     .col {
-      order: 2; /* Default order for tablet view */
+      order: 2; 
+    } */
+
+    /* .col-lt {
+      order: 4; 
+      flex-basis: 100%;
     }
   
     .col-md {
-    order: 2; /* Reset order for col-md to default */
-    flex-basis: 50%; /* Take up 50% of the width */
+    order: 2; 
+    flex-basis: 20%;
   }
 
   .col-rt {
-    order: 3; /* Move col-rt to the top */
-    flex-basis: 50%; /* Take up 50% of the width */
-  }
-
-  .col-lt {
-    order: 1; /* Move col-lt below col-rt */
-    flex-basis: 100%; /* Take up 100% of the width */
-  }
-  }
+    order: 3; 
+    flex-basis: 20%;
+  } */
+  } 
   
   
