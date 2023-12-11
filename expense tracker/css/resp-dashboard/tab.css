@@ -75,7 +75,6 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        background-color: #51D289;
         justify-content: space-around;
         gap: 2.625rem;
         outline: 1px solid black;
