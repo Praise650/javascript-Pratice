@@ -5,40 +5,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind Tutorial</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="base-style.css">
 </head>
 
-<body class="w-full h-full bg-yellow-100">
-    <nav class="px-16 py-16 bg-red-300 flex flex-col">
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Profile</li>
-            <li><button>Logout</button></li>
-        </ul>
-    </nav>
+<body class="w-screen h-screen">
+    <div> <!-- wrapper-->
+        <div
+            class="px-12 py-12 max-sm:bg-red-500 sm:bg-slate-950 md:bg-slate-600 lg:bg-red-300 flex flex-row content-center">
+            <!--nav-->
+            <nav>
+                <div>
+                    <h1 class="font-bold uppercase p-4 border-b border-green-100">
+                        <a href="/">Logo</a>
+                    </h1>
+                </div>
+                <!-- <ul class='bg-blue-300 list-none flex'>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Profile</li>
+                    <li><button>Logout</button></li>
+                </ul> -->
+            </nav>
+        </div> <!-- end of nav -->
 
-    <div class="mt-2 flex flex-row justify-between bg-black">
-        <div class="px-16 py-16 bg-red-300 flex flex-col">
-            <div class="index-one">1</div>
-            <div class="index-two">2</div>
-            <div class="index-three">3</div>
-            <div class="index-four">4</div>
+        <main class="px-16 py-16 bg-stone-400">
+            <div>
+                <a>Login</a>
+                <a>Sign Up</a>
             </div>
-        <div class="px-16 py-16 bg-red-300 flex flex-col">
-            <div class="index-one">1</div>
-            <div class="index-two">2</div>
-            <div class="index-three">3</div>
-            <div class="index-four">4</div>
-        </div>
-        <div class="px-16 py-16 bg-red-300 flex flex-col">
-            <div class="index-one">1</div>
-            <div class="index-two">2</div>
-            <div class="index-three">3</div>
-            <div class="index-four">4</div>
-        </div>
-    </div>
-    </div>
+
+            <header>
+                <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
+                <h2 class="text-2xl font-semibold">For Ninjas</h2>
+            </header>
+
+            <div>
+                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Recipe</h4>
+                <div class="mt-8">
+                    <!-- cards go here -->
+                    <div>
+                        <img class="h-[500px] w-[500px]" src='assets/images/img_one.jpg' alt="">
+                        <div>
+                            <span>5 bean chilli stew</span>
+                            <span>Recipe by Praise</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Most Popular</h4>
+                <div class="mt-8">
+                    <!-- cards go here -->
+                    <div>
+                        <img class="h-[500px] w-[500px]" src='assets/images/img_two.jpg' alt="">
+                        <div>
+                            <span>5 bean chilli stew</span>
+                            <span>Recipe by Praise</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>Load more</div>
+                </div>
+            </div>
+        </main>
+        <!-- <div class="mt-2 flex flex-row justify-between bg-black">
+            <div class="px-16 py-16 bg-red-300 flex flex-col">
+                <div class="index-one">1</div>
+                <div class="index-two">2</div>
+                <div class="index-three">3</div>
+                <div class="index-four">4</div>
+            </div>
+            <div class="px-16 py-16 bg-red-300 flex flex-col">
+                <div class="index-one">1</div>
+                <div class="index-two">2</div>
+                <div class="index-three">3</div>
+                <div class="index-four">4</div>
+            </div>
+            <div class="px-16 py-16 bg-red-300 flex flex-col">
+                <div class="index-one">1</div>
+                <div class="index-two">2</div>
+                <div class="index-three">3</div>
+                <div class="index-four">4</div>
+            </div>
+        </div> -->
+    </div> <!-- end of wrapper -->
+    <!-- <input type="file" id="fileInput" directory webkitdirectory multiple />
+    <div id="imageList"></div>
+
+    <script src="script.js"></script> -->
+    <!-- <script type="module" src="./js/load_images.js"></script> -->
+
 </body>
 
 </html>
