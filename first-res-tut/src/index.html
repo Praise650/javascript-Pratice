@@ -10,9 +10,9 @@
 
 <body class="w-screen h-screen">
     <div> <!-- wrapper-->
+        <!--nav-->
         <div
             class="px-12 py-12 max-sm:bg-red-500 sm:bg-slate-950 md:bg-slate-600 lg:bg-red-300 flex flex-row content-center">
-            <!--nav-->
             <nav>
                 <div>
                     <h1 class="font-bold uppercase p-4 border-b border-green-100">
@@ -26,7 +26,8 @@
                     <li><button>Logout</button></li>
                 </ul> -->
             </nav>
-        </div> <!-- end of nav -->
+        </div> 
+        <!-- end of nav -->
 
         <main class="px-16 py-16 bg-stone-400">
             <div>
@@ -68,6 +69,10 @@
                     <div>Load more</div>
                 </div>
             </div>
+
+            <div>
+                <ul id="photos" class="photos bg-white flex flex-wrap flex-col"></ul>    
+            </div>
         </main>
         <!-- <div class="mt-2 flex flex-row justify-between bg-black">
             <div class="px-16 py-16 bg-red-300 flex flex-col">
@@ -95,6 +100,8 @@
 
     <script src="script.js"></script> -->
     <!-- <script type="module" src="./js/load_images.js"></script> -->
+    <script type="module" src="./index.js"></script>
+
 
 </body>
 
