@@ -84,26 +84,34 @@ class User {
 // }
 
 
+let currentPage = 0;
+let limit = 10;
+function next () {
+    currentPage ++;
+}
 
 async function displayUsers() {
     const photos = document.getElementById('photos');
-    const cardTemplate = document.getElementById('card'); // Get the card template
+    const cardTemplate = document.getElementById('card');
 
     try {
-        const users = await getUsers();
+        const usersData = await getUsers();
+        const users = usersData.slice(0, limit);
         if (users.length > 0) {
-            users.forEach((item) => {
+            users.map((item, index) => {
+                // users.forEach((item, index) => {
                 const user = new User(item.userId, item.id, item.title, item.body);
 
                 // Clone the card template to create a new card for each user
                 const card = cardTemplate.cloneNode(true);
                 card.removeAttribute('id'); // Remove ID to avoid duplicate IDs in the DOM
 
+
                 // Update the content of the cloned card for the current user
                 const cardTitle = card.querySelector('#card-title');
                 const cardBody = card.querySelector('#card-body');
 
-                cardTitle.textContent = `Title: ${user.title}`;
+                cardTitle.textContent = `${index + 1} Title: ${user.title}`;
                 cardBody.textContent = user.body;
 
                 photos.appendChild(card); // Append the new card to the photos container

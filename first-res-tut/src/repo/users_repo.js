@@ -1,4 +1,4 @@
-import { apiService, ApiService } from "../api_service/api_service.js";
+import { apiService } from "../api_service/api_service.js";
 
 // async function fetchData() {
 //     try {
@@ -23,6 +23,7 @@ import { apiService, ApiService } from "../api_service/api_service.js";
 async function fetchData() {
     try {
         let users = await apiService.retrieveData('/posts');
+        console.log("user data..", users);
         return users;
     } catch (error) {
         console.error(error);

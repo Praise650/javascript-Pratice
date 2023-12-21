@@ -4,9 +4,9 @@ class ApiService {
         this.baseUrl = 'https://jsonplaceholder.typicode.com';
     };
 
-    static setEndpoint(endpoint) {
-        this.url = endpoint;
-    }
+    // static setEndpoint(endpoint) {
+    //     this.url = endpoint;
+    // }
 
     async postData() { }
     async retrieveData(endpoint) {
@@ -24,4 +24,4 @@ class ApiService {
 
 var apiService = new ApiService();
 
-export { apiService, ApiService }
+export { apiService, }
